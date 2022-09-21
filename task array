@@ -1,0 +1,92 @@
+1Input :
+console.log(range(3, 7));
+Expected Output:
+[3,4, 5, 6, 7]
+
+function foo(start, end) 
+{
+  
+		if (start > end) {
+			var arr = new Array(start - end + 1);
+			for (var i = 0; i < arr.length; i++, start--) {
+				resarrult[i] = start;
+			}
+			return arr;
+		} 
+       else 
+       {
+			var arro = new Array(end-start+1);
+         
+		for (var j = 0; j < arro.length; j++, start++) 
+        {
+			arro[j] = start;
+		}
+      		return arro;
+		}
+	}
+
+console.log(foo(3, 7));
+
+OUTPUT : [3,4,5,6,7]
+
+
+2
+Input :
+console.log(range(-4, 7));
+Expected Output:
+[-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+
+
+function foo(start, end) 
+{
+  
+		if (start > end) {
+			var arr = new Array(start - end + 1);
+			for (var i = 0; i < arr.length; i++, start--) {
+				resarrult[i] = start;
+			}
+			return arr;
+		} 
+       else 
+       {
+			var arro = new Array(end-start+1);
+         
+		for (var j = 0; j < arro.length; j++, start++) 
+        {
+			arro[j] = start;
+		}
+      		return arro;
+		}
+	}
+    console.log(foo(-4, 7));
+
+
+    OUTPUT : [-4,-3,-2,-1,0,1,2,3,4,5,6,7]
+
+
+
+3 var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+Sample Output: q ( 5 times )
+
+
+var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var mj = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mj<m)
+                {
+                  mj=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mj +" times ) ") ;
+
+OUTPUT : q[5 times]
